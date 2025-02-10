@@ -1,0 +1,167 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Header */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.contactbtn {
+  background-color: #8a4fff;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactbtn:hover {
+  background-color: rgba(138, 79, 255, 0.8);
+}
+
+/* Input fields and form */
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+/* Grid Layout for Form */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Adjust Grid Layout on Larger Screens */
+@media (min-width: 640px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Modal Styling */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Input fields inside modal */
+.modal-content input, .modal-content textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Responsive DataGrid Container */
+.data-grid-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .data-grid-container {
+    width: 100%;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .contactbtn {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1.2rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .data-grid-container {
+    margin-top: 1rem;
+    overflow-x: scroll;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium screen adjustments */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contactbtn {
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+  }
+
+  .data-grid-container {
+    width: 100%;
+  }
+}
