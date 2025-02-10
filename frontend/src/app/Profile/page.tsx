@@ -145,11 +145,13 @@ const NewOwnerForm: React.FC = () => {
               <div className="flex flex-col items-center">
                 {/* Logo Upload */}
                 <label htmlFor="logo" className="cursor-pointer">
-                  <Image 
-                    src={logoPreview || 'https://via.placeholder.com/150'}
-                    alt=""
-                    className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover"
-                  />
+                <Image 
+                  src={logoPreview || 'https://via.placeholder.com/150'}
+                  alt="Company Logo"
+                  width={150}  // Set explicit width
+                  height={150} // Set explicit height
+                  className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover"
+                />
                 </label>
                 <input
                   type="file"

@@ -337,8 +337,14 @@ const OwnersListPage: React.FC = () => {
               </button>
           <div className="flex items-center justify-center mb-6">
             {owner.logo ? (
-              <Image src={owner.logo} alt="Logo" className="w-24 h-24 object-contain rounded-full border border-gray-300" />
-            ) : (
+              <Image
+                src={owner.logo}
+                alt="Logo"
+                width={96}  // Set appropriate width
+                height={96} // Set appropriate height
+                className="w-24 h-24 object-contain rounded-full border border-gray-300"
+              />            
+              ) : (
               <div className="w-24 h-24 bg-gray-300 flex items-center justify-center text-gray-700 rounded-full border border-gray-300">
                 No Logo
               </div>
