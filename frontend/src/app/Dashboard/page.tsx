@@ -208,6 +208,10 @@ interface ApiResponse {
 
 
 export default function Home() {
+  // const formatDate = (dateString: string): string => {
+  //   const date = new Date(dateString);
+  //   return date.toISOString().split("T")[0];
+  // };
   const backdrops: Array<"transparent" | "opaque" | "blur"> = ["opaque"];
   const [categorizedLeads, setCategorizedLeads] = useState<CategorizedLeads>(
     {}
@@ -466,10 +470,6 @@ export default function Home() {
     fetchData();
   }, []);
 
-  const formatDate = (dateString: string): string => {
-    const date = new Date(dateString);
-    return date.toISOString().split("T")[0];
-  };
 
   const handleDragStart = (
     e: React.DragEvent,
@@ -611,7 +611,7 @@ export default function Home() {
   return (
     <>
       <div className="icon-container">
-        <Navbar />
+        <Navbar/>
         <div className="flex flex-wrap gap-4">
           {backdrops.map((backdrop) => (
             <Popover
@@ -693,7 +693,7 @@ export default function Home() {
                             </p>
                             <p>
                               <strong>Next Date:</strong>{" "}
-                              {formatDate(lead.endDate)}
+                              {/* {formatDate(lead.endDate)} */}
                             </p>
                           </div>
                           <div className="leadAmount">
